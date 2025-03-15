@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Package Tracking</title>
+    <script>
+        function trackPackage() {
+            var trackingNumber = document.getElementById("trackingInput").value;
+            var statusMessage = "";
+            
+            if (trackingNumber === "RA238419265LK") {
+                statusMessage = "This package is from the USA and has been shipped. Expected delivery in 28 days.";
+            } else {
+                statusMessage = "Tracking number not found.";
+            }
+            
+            document.getElementById("status").innerText = statusMessage;
+        }
+    </script>
+</head>
+<body>
+    <h2>Package Tracking</h2>
+    <input type="text" id="trackingInput" placeholder="Enter tracking number">
+    <button onclick="trackPackage()">Track</button>
+    <p id="status"></p>
+</body>
+</html>
